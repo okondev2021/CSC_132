@@ -2,7 +2,14 @@ document.addEventListener('DOMContentLoaded',function(){
 
 
 
+
+    
     const width = window.innerWidth
+
+    const parent = document.querySelector('.collaborators_track')
+    const numbersOfContributors = parent.childElementCount
+
+
 
 
 
@@ -13,9 +20,6 @@ document.addEventListener('DOMContentLoaded',function(){
         parentDiv.lastElementChild.style.display = 'none'
 
         // Switch collaborators after the set time
-
-        const parent = document.querySelector('.collaborators_track')
-        const numbersOfContributors = parent.childElementCount
 
         var animationCount = []
         for(let i = 1; i<= numbersOfContributors; i++){
@@ -38,6 +42,8 @@ document.addEventListener('DOMContentLoaded',function(){
 
 
 
+
+
     if(width <= 500){
 
         document.querySelectorAll(".collaborator").forEach(function(collaborator){
@@ -45,66 +51,26 @@ document.addEventListener('DOMContentLoaded',function(){
         })
         document.getElementById('collaborator_1').style.display = 'block'
 
+        var collaborator_count = 1;
+        var collaboratorsCount = numbersOfContributors
         
+        setInterval(()=>{
+
+            document.querySelectorAll(".collaborator").forEach(function(collaborator){
+                collaborator.style.display = 'none'
+            })
+            document.getElementById(`collaborator_${collaborator_count}`).style.display = 'block'
+
+            collaborator_count++
+
+            if (collaborator_count > collaboratorsCount){
+                collaborator_count = 1
+            }
 
 
 
-
+        }, 3000)
 
     }
 
-
-
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // // displaying both left and right part of the hero section once the page loads
-    // document.querySelector('.hero_left').classList.add('reveal_hero')
-    // document.querySelector('.hero_right').classList.add('reveal_hero')
-
-    // // reveal projects with a smooth transition when scrolled to where they are positioned
-    // window.addEventListener('scroll',revealProjects)
-
-    // function revealProjects(){
-    //     document.querySelectorAll('.project').forEach(function(section){
-    //         var windowheight = window.innerHeight
-    //         var revealtop = section.getBoundingClientRect().top
-    //         var reavealpoint = 0
-    //         if (revealtop < windowheight - reavealpoint){
-    //             section.classList.add('reveal_projects')
-    //         }
-    //         else{
-    //             section.classList.remove('reveal_projects')
-    //         }
-    //     })
-    // }

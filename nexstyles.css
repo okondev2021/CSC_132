@@ -576,6 +576,12 @@ footer p{
         min-height: 100vh;
     }
 
+    header nav .left_nav h1 i{
+        font-size: 1.5rem;
+        color: var(--secondary);
+        font-family: 'Pacifico', cursive;
+    }
+
     header nav .right_nav{
         display: none;
     }
@@ -601,6 +607,8 @@ footer p{
 
     header main .hero_left h1{
         text-align: center;
+        font-size: 1.6rem;
+        width: 100%;
     }
     
     header main .hero_left p{
