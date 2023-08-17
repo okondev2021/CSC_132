@@ -30,7 +30,6 @@ body{
 
 
 
-
 /* HEADER */
 
 header{
@@ -609,11 +608,13 @@ footer p{
         text-align: center;
         font-size: 1.6rem;
         width: 100%;
+        font-weight: bold;
     }
     
     header main .hero_left p{
         width: 100%;
         text-align: center;
+        font-weight: 400;
     }
 
 
@@ -622,6 +623,7 @@ footer p{
     /* STACK */
 
     .stack{
+        height: 20vh;
         margin-top: 3em;
         overflow: hidden;
     }
@@ -704,6 +706,10 @@ footer p{
         width: 100%;
     }
 
+    .project_container .projects .project .project_info h3{
+        font-weight: 500;
+    }
+
 
 
 
@@ -736,10 +742,18 @@ footer p{
         border-radius: 50%;
     }
 
+    .collaborators .collaborators_track .collaborator .collaborator_info h5, .collaborators .collaborators_track .collaborator .collaborator_info h3{
+        font-weight: bold;
+    }
+
 
 
 
     /* EMAIL */
+
+    .email div h2{
+        font-weight: bold;
+    }
 
     .email form{
         display: flex;
@@ -777,5 +791,83 @@ footer p{
 
 
 
+}
+
+
+
+
+
+
+
+
+/* MOBILE NAVBAR */
+
+.container .mobile_nav_bar{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--primary);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    display: none;
+    opacity: 0;
+    transition: 1s ease-in;
+}
+
+.container .mobile_nav_bar .close_div{
+    display: flex;
+    justify-content: flex-end;
+    padding: 2em 1em;
+}
+
+.container .mobile_nav_bar .close_div img{
+    border-radius: 50%;
+    border: 2px solid var(--tertiary);
+    padding: 10px;
+    width: 50px;
+    height: auto;
+}
+
+
+.container .mobile_nav_bar .mobile_nav_container{
+    height: 80%;
+}
+
+.container .mobile_nav_bar .mobile_nav_container nav{
+    width: 100%;
+    display: flex;
+    height: 100%;
+}
+
+.container .mobile_nav_bar .mobile_nav_container nav ul{
+    list-style-type: none;
+    display: grid;
+    grid-gap: 2em;
+    height: 100%;
+    width: 100%;
+    padding: 2em 0em;
+}
+
+.container .mobile_nav_bar .mobile_nav_container nav ul li{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border: 2px solid var(--tertiary);
+    border-radius: 50px;
+    width: 60%;
+    height: 70%;
+    margin: 0em auto;
+}
+
+.container .mobile_nav_bar .mobile_nav_container nav ul li a{
+    text-decoration: none;
+    color: var(--tertiary);
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    font-size: 1.5rem;
 }
 

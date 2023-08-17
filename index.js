@@ -10,9 +10,6 @@ document.addEventListener('DOMContentLoaded',function(){
     const numbersOfContributors = parent.childElementCount
 
 
-
-
-
     if(width <= 768 && width >= 600){
 
         // Set the display property of the last child element to none
@@ -72,5 +69,36 @@ document.addEventListener('DOMContentLoaded',function(){
         }, 3000)
 
     }
+
+
+
+
+    document.querySelector('.hamburger').addEventListener('click', function(){
+        document.querySelector('.mobile_nav_bar').style.display = 'block'
+
+        setTimeout(() => {
+            document.querySelector('.mobile_nav_bar').style.opacity = '1'
+        }, 500);
+    })
+
+
+    document.querySelector('.close_div').addEventListener('click', function(){
+        document.querySelector('.mobile_nav_bar').style.opacity = '0'
+
+        setTimeout(() => {
+            document.querySelector('.mobile_nav_bar').style.display = 'none'
+        }, 1000);
+    })
+
+
+
+
+
+
+
+
+
+
+
 
 })
