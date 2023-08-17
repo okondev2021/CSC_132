@@ -90,6 +90,18 @@ document.addEventListener('DOMContentLoaded',function(){
         }, 1000);
     })
 
+    document.querySelectorAll(".mobile_nav_item").forEach(function(mobile_nav_item){
+        mobile_nav_item.addEventListener("click", function(){
+
+            document.querySelector('.mobile_nav_bar').style.opacity = '0'
+
+            setTimeout(() => {
+                document.querySelector('.mobile_nav_bar').style.display = 'none'
+            }, 1000);
+            
+        })
+    })
+
 
 
 
