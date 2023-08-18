@@ -1,6 +1,64 @@
 document.addEventListener('DOMContentLoaded',function(){
 
 
+   // DISPLAY SIDE ARROW BASED ON LOCATION
+    window.onscroll = function(){
+
+        const isAtTop = window.scrollY === 0 || document.documentElement.scrollTop === 0
+        if(window.scrollY >=  document.body.scrollHeight/2){
+            document.querySelector('.arrow_top').style.display = 'block'
+        }
+        else{
+            if(isAtTop){
+                document.querySelector('.arrow_top').style.display = 'none'
+            }
+        }
+
+    }
+
+
+    // REVEAL ANIMATIONS
+
+    const rightHero = document.querySelector(".hero_right")
+    rightHero.classList.add("reveal_hero_right")
+
+    const leftH1 = document.querySelector(".hero_left_h1")
+    leftH1.classList.add("reveal_h1")
+
+    const leftP = document.querySelector(".hero_left_p")
+    leftP.classList.add("reveal_p")
+
+    const leftButton = document.querySelector(".hero_left_button")
+    leftButton.classList.add("reveal_button")
+
+    function reveal(name, item){
+        var windowheight = window.innerHeight
+        var revealtop = item.getBoundingClientRect().top
+        var reavealpoint = 0
+        if (revealtop < windowheight - reavealpoint){
+            item.classList.add(name)
+        }
+        else{
+            item.classList.remove(name)
+        }
+    }
+
+    function revealProjectImage(){
+        document.querySelectorAll('.project_img').forEach(function(project_img){
+            reveal('reveal_project_img', project_img)
+        })
+    }
+    window.addEventListener('scroll',revealProjectImage)
+
+    function revealCollaboratorSection(){
+        document.querySelectorAll('.collaborators_track').forEach(function(collaborators_track){
+            reveal('reveal_collaborators_track', collaborators_track)
+        })
+    }
+    window.addEventListener('scroll',revealCollaboratorSection)
+
+
+
 
 
     
@@ -9,6 +67,7 @@ document.addEventListener('DOMContentLoaded',function(){
     const parent = document.querySelector('.collaborators_track')
     const numbersOfContributors = parent.childElementCount
 
+    // COLLABORATORS ANIMATION FOR TABLET DEVICE
 
     if(width <= 768 && width >= 600){
 
@@ -40,7 +99,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
 
 
-
+    // COLLABORATORS ANIMATION FOR MOBILE DEVICE
     if(width <= 500){
 
         document.querySelectorAll(".collaborator").forEach(function(collaborator){
@@ -72,6 +131,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
 
 
+    // MOBILE NAV BAR
 
     document.querySelector('.hamburger').addEventListener('click', function(){
         document.querySelector('.mobile_nav_bar').style.display = 'block'
