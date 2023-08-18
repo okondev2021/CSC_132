@@ -1,6 +1,110 @@
 document.addEventListener('DOMContentLoaded',function(){
 
 
+    // CHANGING THE THEME OF THE WEBSITE
+
+    const primary = "#FDF7FF";
+    const secondary = "#1C0733";
+    const secondaryTwo = "#ae9dc0";
+    const tertiary = "#E8D5B5" ;
+
+    document.querySelectorAll(".mode").forEach(function(mode){
+
+        mode.addEventListener('click', function(){
+
+            mode.classList.toggle('dark_theme')
+    
+            if(mode.classList.contains("dark_theme")){
+    
+                // BASIC CHANGES TO MODE DIV
+                document.querySelectorAll('.round_ball').forEach(function(round_ball){
+                    round_ball.style.background = primary
+                })
+                document.querySelectorAll('.ball').forEach(function(ball){
+                    ball.style.justifyContent = 'flex-end'
+                })
+                document.querySelectorAll('.theme').forEach(function(theme){
+                    theme.style.background = secondary
+                })
+    
+                // CHANGES MADE TO DOCUMENT
+
+                document.querySelector('.container').style.background = secondary
+                document.querySelector('.email').style.background = "#9e60bd"
+                document.querySelector('footer').style.background = "#0b0215"
+                // MINOR ELEMENTS
+                document.querySelector('.logo_text').style.color = "#603682"
+                document.querySelectorAll('.nav_links').forEach(function(nav_links){
+                    nav_links.style.color = "#5f6b93"
+                })
+
+                document.querySelectorAll('h1').forEach(function(h1){
+                    h1.style.color = "#d6cacd"
+                })
+                document.querySelectorAll('h2').forEach(function(h2){
+                    h2.style.color = "#d6cacd"
+                })
+                document.querySelectorAll('h3').forEach(function(h3){
+                    h3.style.color = "#d6cacd"
+                })
+                document.querySelectorAll('h5').forEach(function(h5){
+                    h5.style.color = tertiary
+                })
+
+                document.querySelector('.email_header').style.color = tertiary
+
+                document.querySelector(".arrow_top").style.background = tertiary
+                document.querySelector(".arrow").style.color = secondary
+
+    
+    
+    
+            }
+            
+            else{
+                
+                // BASIC CHANGES TO MODE DIV
+                document.querySelectorAll('.round_ball').forEach(function(round_ball){
+                    round_ball.style.background = secondary
+                })
+                document.querySelectorAll('.ball').forEach(function(ball){
+                    ball.style.justifyContent = 'flex-start'
+                })
+                document.querySelectorAll('.theme').forEach(function(theme){
+                    theme.style.background = primary
+                })
+    
+                // CHANGES MADE TO DOCUMENT
+
+                document.querySelector('.container').style.background = primary
+                document.querySelector('.email').style.background = tertiary
+                document.querySelector('footer').style.background = secondary
+
+                document.querySelectorAll('h1').forEach(function(h1){
+                    h1.style.color = secondary
+                })
+                document.querySelectorAll('h2').forEach(function(h2){
+                    h2.style.color = secondary
+                })
+                document.querySelectorAll('h3').forEach(function(h3){
+                    h3.style.color = secondary
+                })
+                document.querySelectorAll('h5').forEach(function(h5){
+                    h5.style.color = tertiary
+                })
+
+
+                document.querySelector(".arrow_top").style.background = secondary
+                document.querySelector(".arrow").style.color = tertiary
+    
+            }
+
+        })
+
+    })
+
+    
+
    // DISPLAY SIDE ARROW BASED ON LOCATION
     window.onscroll = function(){
 
@@ -100,7 +204,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
 
     // COLLABORATORS ANIMATION FOR MOBILE DEVICE
-    if(width <= 500){
+    if(width <= 560){
 
         document.querySelectorAll(".collaborator").forEach(function(collaborator){
             collaborator.style.display = 'none'

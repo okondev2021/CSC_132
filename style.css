@@ -46,7 +46,7 @@ header nav{
     align-items: center;
 }
 
-header nav .left_nav h1 i{
+header nav .left_nav h1 .logo_text{
     font-size: 2rem;
     color: var(--secondary);
     font-family: 'Pacifico', cursive;
@@ -54,7 +54,8 @@ header nav .left_nav h1 i{
 
 header nav .right_nav ul{
     display: flex;
-    list-style-type: none
+    list-style-type: none;
+    align-items: baseline;
 }
 
 header nav .right_nav ul li{
@@ -452,7 +453,7 @@ header main .hero_right img{
 
 .email h2{
     color: var(--secondary);
-    font-weight: 100;
+    font-weight: 500;
     font-size: 1.7rem;
     width: 90%;
     text-align: center;
@@ -511,6 +512,158 @@ footer p{
 
 
 
+/* ADDITIONAL */
+
+/* MOBILE NAVBAR */
+
+.container .mobile_nav_bar{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--secondary);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    display: none;
+    opacity: 0;
+    transition: 1s ease-in;
+}
+
+.container .mobile_nav_bar .close_div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em 1em;
+}
+
+.container .mobile_nav_bar .close_div img{
+    border-radius: 50%;
+    border: 2px solid var(--tertiary);
+    padding: 10px;
+    width: 50px;
+    height: auto;
+}
+
+
+.container .mobile_nav_bar .mobile_nav_container{
+    height: 80%;
+}
+
+.container .mobile_nav_bar .mobile_nav_container nav{
+    width: 100%;
+    display: flex;
+    height: 100%;
+}
+
+.container .mobile_nav_bar .mobile_nav_container nav ul{
+    list-style-type: none;
+    display: grid;
+    grid-gap: 2em;
+    height: 100%;
+    width: 100%;
+    padding: 2em 0em;
+}
+
+.container .mobile_nav_bar .mobile_nav_container nav ul li{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border: 2px solid var(--tertiary);
+    border-radius: 50px;
+    width: 60%;
+    height: 70%;
+    margin: 0em auto;
+}
+
+.container .mobile_nav_bar .mobile_nav_container nav ul li a{
+    text-decoration: none;
+    color: var(--tertiary);
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    font-size: 1.5rem;
+}
+
+
+
+
+/* ARROW_TOP */
+
+.container .arrow_top{
+    position: fixed;
+    bottom: 10%;
+    right: 2%;
+    z-index: 4;
+    background-color:var(--secondary);
+    padding: 1em;
+    border-radius: 5px;
+    display: none;
+}
+
+.container .arrow_top i{
+    color: var(--tertiary);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+
+
+
+/* THEME */
+
+.mode{
+    margin: 0em 1em;
+    width:70px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+.mode .theme{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+    border-radius: 50px;
+    background-color: var(--primary) ;
+    box-shadow: inset 1px 1px 4px rgb(101, 101, 101);
+}
+
+.mode .theme i{
+    color: var(--tertiary);
+}
+
+.mode .ball{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.5em;
+    transition: 1s ease-in;
+}
+
+.mode .ball .round_ball{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--secondary);
+    transition: 1s ease-in;
+}
+
+
+
+
+
 @media (max-width: 850px) {
     
     /* HEADER */
@@ -531,7 +684,6 @@ footer p{
     }
     
     header main .hero_left p{
-        color: var(--weak);
         width: 80%;
         line-height: 25px;
         margin-top: 1em;
@@ -622,7 +774,7 @@ footer p{
 
 
 
-@media (max-width: 500px){
+@media (max-width: 550px){
 
     /* HEADER */
 
@@ -635,7 +787,7 @@ footer p{
 
     header nav .left_nav h1 i{
         font-size: 1.5rem;
-        color: var(--secondary);
+        /* color: var(--secondary); */
         font-family: 'Pacifico', cursive;
     }
 
@@ -838,103 +990,25 @@ footer p{
         align-items: center;
         text-align: center;
     }
+
+
+
+
+    /* THEME */
+
+    .mode{
+        width:100px;
+        height: 40px;
+    }
     
+    .mode .theme i{
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+    
+    .mode .ball .round_ball{
+        width: 30px;
+        height: 30px;
+    }
+             
 }
-
-
-
-
-
-/* MOBILE NAVBAR */
-
-.container .mobile_nav_bar{
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background-color: var(--secondary);
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    display: none;
-    opacity: 0;
-    transition: 1s ease-in;
-}
-
-.container .mobile_nav_bar .close_div{
-    display: flex;
-    justify-content: flex-end;
-    padding: 2em 1em;
-}
-
-.container .mobile_nav_bar .close_div img{
-    border-radius: 50%;
-    border: 2px solid var(--tertiary);
-    padding: 10px;
-    width: 50px;
-    height: auto;
-}
-
-
-.container .mobile_nav_bar .mobile_nav_container{
-    height: 80%;
-}
-
-.container .mobile_nav_bar .mobile_nav_container nav{
-    width: 100%;
-    display: flex;
-    height: 100%;
-}
-
-.container .mobile_nav_bar .mobile_nav_container nav ul{
-    list-style-type: none;
-    display: grid;
-    grid-gap: 2em;
-    height: 100%;
-    width: 100%;
-    padding: 2em 0em;
-}
-
-.container .mobile_nav_bar .mobile_nav_container nav ul li{
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    border: 2px solid var(--tertiary);
-    border-radius: 50px;
-    width: 60%;
-    height: 70%;
-    margin: 0em auto;
-}
-
-.container .mobile_nav_bar .mobile_nav_container nav ul li a{
-    text-decoration: none;
-    color: var(--tertiary);
-    font-weight: 500;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
-    font-size: 1.5rem;
-}
-
-
-
-
-/* ARROW_TOP */
-
-.container .arrow_top{
-    position: fixed;
-    bottom: 10%;
-    right: 2%;
-    z-index: 4;
-    background-color:var(--secondary);
-    padding: 1em;
-    border-radius: 5px;
-    display: none;
-}
-
-.container .arrow_top i{
-    color: var(--tertiary);
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-

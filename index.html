@@ -17,7 +17,19 @@
 
         <div class="mobile_nav_bar">
             <div class="close_div">
-                <img src="./svg/icon-close.svg" alt="">
+                <div class="mode">
+                    <div class="theme">
+                        <i class=" moon bi bi-moon-fill"></i>
+                        
+                        <i class=" sun bi bi-sun-fill"></i>
+                    </div>
+                    <div class="ball">
+                        <div class="round_ball"></div>
+                    </div>
+                </div>
+                <div>
+                    <img src="./svg/icon-close.svg" alt="">
+                </div>
             </div>
             <div class="mobile_nav_container">
                 <nav>
@@ -32,7 +44,7 @@
         </div>
 
         <div class="arrow_top">
-            <a href="#"><i class="bi bi-arrow-up"></i></a>
+            <a href="#"><i class="arrow bi bi-arrow-up"></i></a>
         </div>
 
         <!-- HERO SECTION -->
@@ -40,14 +52,24 @@
 
             <nav>
                 <div class="left_nav">
-                    <h1><i>CSC <sub><i>132</i></sub></i></h1>
+                    <h1><i class="logo_text">CSC <sub><i>132</i></sub></i></h1>
                 </div>
                 <div class="right_nav">
                     <ul>
-                        <li><a href="#STACK">Stack</a></li>
-                        <li><a href="#PROJECT">Projects</a></li>
-                        <li><a href="#COLLABORATORS">Contributors</a></li>
-                        <li><a href="#CONTACT">Contact Us</a></li>
+                        <li><a class="nav_links" href="#STACK">Stack</a></li>
+                        <li><a class="nav_links" href="#PROJECT">Projects</a></li>
+                        <li><a class="nav_links" href="#COLLABORATORS">Contributors</a></li>
+                        <li><a class="nav_links" href="#CONTACT">Contact Us</a></li>
+                        <div class="mode">
+                            <div class="theme">
+                                <i class=" moon bi bi-moon-fill"></i>
+                                
+                                <i class=" sun bi bi-sun-fill"></i>
+                            </div>
+                            <div class="ball">
+                                <div class="round_ball"></div>
+                            </div>
+                        </div>
                     </ul>
                 </div>
 
@@ -203,7 +225,7 @@
         <section id="CONTACT" class="email">
             <div>
                 <p>Let's keep in touch</p>
-                <h2>Stay up-to-date with what we’re doing</h2>
+                <h2 class="email_header">Stay up-to-date with what we’re doing</h2>
                 <form action="https://formsubmit.co/sojapril16@gmail.com" method="POST">
                     <input type="hidden" name="_subject" value="132 SUBSCRIPTION">
                     <input type="hidden" name="_next" value="https://csc132.netlify.app">
