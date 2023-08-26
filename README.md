@@ -6,10 +6,3 @@
 
 10 ---->#E8D5B5
 
-
-
-
-## ICONS
-<i class="bi bi-moon-fill"></i>
-
-<i class="bi bi-sun-fill"></i>

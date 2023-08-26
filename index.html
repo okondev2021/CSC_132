@@ -15,6 +15,7 @@
 <body>
     <section class="container">
 
+        <!-- MOBILE NAVBAR ------! FIXED -->
         <div class="mobile_nav_bar">
             <div class="close_div">
                 <div class="mode">
@@ -43,10 +44,6 @@
             </div>
         </div>
 
-        <div class="arrow_top">
-            <a href="#"><i class="arrow bi bi-arrow-up"></i></a>
-        </div>
-
         <!-- HERO SECTION -->
         <header>
 
@@ -63,7 +60,6 @@
                         <div class="mode">
                             <div class="theme">
                                 <i class=" moon bi bi-moon-fill"></i>
-                                
                                 <i class=" sun bi bi-sun-fill"></i>
                             </div>
                             <div class="ball">
@@ -226,22 +222,47 @@
             <div>
                 <p>Let's keep in touch</p>
                 <h2 class="email_header">Stay up-to-date with what we’re doing</h2>
-                <form action="https://formsubmit.co/sojapril16@gmail.com" method="POST">
-                    <input type="hidden" name="_subject" value="132 SUBSCRIPTION">
-                    <input type="hidden" name="_next" value="https://csc132.netlify.app">
-                    <input type="hidden" name="_cc" value="ti664469@gmail.com">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_autoresponse" value="Thank You">
-                    <input type="hidden" name="_template" value="table">
-                    <input name="email" required type="email" placeholder="Email Address">
-                    <input type="submit"> 
-                </form>
+                <div class="form_container">
+                    <form id="myform" action="https://formsubmit.co/sojapril16@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="132 SUBSCRIPTION">
+                        <input type="hidden" name="_next" value="https://csc132.netlify.app#CONTACT">
+                        <input type="hidden" name="_cc" value="ti664469@gmail.com">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_autoresponse" value="Thank You">
+                        <input type="hidden" name="_template" value="table">
+                        <input name="email" required type="email" placeholder="Email Address">
+                    </form>
+                    <div class="formBtn">
+                        <button class="submit">Submit</button> 
+                    </div>
+                </div>
             </div>
         </section>
 
         <footer>
             <p class="last">Made with 💜 and ⚡ by Our COLLABORATORS </p>
         </footer>
+
+        <!-- ABSOLUTE CONTENT BEGINS -->
+        <div class="shadow"></div>
+        <div class="appreciation">
+            <div class="appreciation_container">
+                <div>
+                    <img src="./svg/Mail sent-bro.svg" alt="">
+                    <h3>Thank You</h3>
+                    <p>Your submission has been receivd.</p>
+                    <p>We will make sure to contact you so you are up to datep</p>
+                    <input class='submitt1' form='myform' type="submit" value="Submit">
+                </div>
+            </div>
+        </div>
+
+        <!-- Side arrow -->
+        <div class="arrow_top">
+            <a href="#"><i class="arrow bi bi-arrow-up"></i></a>
+        </div>
+
+        <!-- ABSOLUTE CONTENT END -->
 
 
     </section>

@@ -460,6 +460,12 @@ header main .hero_right img{
     margin-bottom: 1em;
 }
 
+.email .form_container{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
 .email form{
     display: flex;
     margin-bottom: 1em;
@@ -475,7 +481,7 @@ header main .hero_right img{
     outline: none;
 }
 
-.email form input[type="submit"]{
+.email .formBtn .submit{
     margin-left: 1em;
     font-size: 11px;
     background-color: var(--secondary);
@@ -487,6 +493,7 @@ header main .hero_right img{
     cursor: pointer;
     font-weight: bold;
 }
+
 
 
 
@@ -606,6 +613,75 @@ footer p{
     color: var(--tertiary);
     font-size: 1.5rem;
     font-weight: bold;
+}
+
+/* SHADOW */
+
+.container .shadow{
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+
+/* APPRECIATION */
+
+.container .appreciation{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100vh;
+    width: 100%;
+    display: none;
+}
+
+.container .appreciation .appreciation_container{
+    background-color: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 6em;
+}
+
+.container .appreciation .appreciation_container div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container .appreciation .appreciation_container div img{
+    width: 60%;
+}
+
+.container .appreciation .appreciation_container div h3{
+    text-align: center;
+    color: var(--secondary);
+    font-weight: 500;
+    margin-bottom: 1em;
+}
+
+.container .appreciation .appreciation_container div p{
+    text-align: center;
+    color: var(--secondaryTwo);
+    font-size: 0.9rem;
+    margin-bottom: 0.5em;
+}
+
+.container .appreciation .appreciation_container div input{
+    width: 100%;
+    border: none;
+    background-color: var(--tertiary);
+    color: var(--secondary);
+    font-weight: bold;
+    margin-top: 1em;
+    padding: 1em;
+    cursor: pointer;
 }
 
 
@@ -771,12 +847,55 @@ footer p{
 }
 
 
+@media (max-width: 720px){
+
+    /* HEADER */
+
+    header nav{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    header nav .left_nav h1 i{
+        font-size: 1rem;
+        font-family: 'Pacifico', cursive;
+    }
+
+    header nav .left_nav h1 i sub i{
+        visibility: hidden;
+    }
+
+    header nav .right_nav ul li a{
+        text-decoration: none;
+        color: var(--secondary);
+        font-weight: 300;
+        transition: 0.5s ease-in;
+        font-size: 0.8rem;
+    }
+
+    /* STACK */
+
+    .stack .marquee_icon_track:nth-child(2){
+        display: none;
+    }
+
+    .stack .marquee_icon_track:nth-child(1){
+        animation: track1 5s linear infinite  ;
+        width: calc(135px * 5);
+    }
+
+
+
+}
+
 
 
 
 @media (max-width: 550px){
 
     /* HEADER */
+    
 
     header{
         padding-left: 2rem;
@@ -785,9 +904,24 @@ footer p{
         min-height: 100vh;
     }
 
+    header nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     header nav .left_nav h1 i{
-        font-size: 1.5rem;
-        /* color: var(--secondary); */
+        font-size: 1.4rem;
+        font-family: 'Pacifico', cursive;
+    
+    }
+
+    header nav .left_nav h1 i sub i{
+        visibility: visible;
+    }
+
+    header nav .left_nav h1 .logo_text{
+        font-size: 1.4rem;
         font-family: 'Pacifico', cursive;
     }
 
@@ -804,6 +938,7 @@ footer p{
         margin: 2em 0em;
         justify-content: center;
         flex-direction: column;
+        padding-top: 1em;
     }
 
     header main .hero_left{
@@ -816,7 +951,7 @@ footer p{
 
     header main .hero_left h1{
         text-align: center;
-        font-size: 1.6rem;
+        font-size: 1.3rem;
         width: 100%;
         font-weight: bold;
     }
@@ -918,6 +1053,7 @@ footer p{
 
     .project_container .projects .project .project_info h3{
         font-weight: 500;
+        font-size: 1.3rem;
     }
 
 
@@ -965,6 +1101,10 @@ footer p{
         font-weight: bold;
     }
 
+    .email .form_container{
+        flex-direction: column;
+    }
+
     .email form{
         display: flex;
         flex-direction: column;
@@ -979,7 +1119,7 @@ footer p{
         outline: none;
     }
     
-    .email form input[type="submit"]{
+    .email .formBtn .submit{
         margin-left: 0em;
         margin-top: 1em;
         font-size: 1em;
@@ -990,6 +1130,11 @@ footer p{
         align-items: center;
         text-align: center;
     }
+
+    
+
+
+
 
 
 
@@ -1009,6 +1154,19 @@ footer p{
     .mode .ball .round_ball{
         width: 30px;
         height: 30px;
+    }
+
+
+
+    /* APPRECIATION */
+
+    .container .appreciation .appreciation_container{
+        background-color: var(--primary);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2em;
+        width: 90%;
     }
              
 }

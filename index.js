@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
     // COLLABORATORS ANIMATION FOR TABLET DEVICE
 
-    if(width <= 768 && width >= 600){
+    if(width <= 768 && width >= 550){
 
         // Set the display property of the last child element to none
         const parentDiv = document.querySelector('.collaborators_track')
@@ -265,6 +265,16 @@ document.addEventListener('DOMContentLoaded',function(){
             
         })
     })
+
+
+    // THANK YOU MODEL
+    document.querySelector('.submit').addEventListener('click', ()=> {
+        window.location.href = '#'
+        document.querySelector(".shadow").style.display = 'block'
+        document.querySelector(".appreciation").style.cssText = `display:block;display: flex;justify-content: center;
+        align-items: center;`
+    })
+
 
 
 
