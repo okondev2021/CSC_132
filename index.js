@@ -269,10 +269,19 @@ document.addEventListener('DOMContentLoaded',function(){
 
     // THANK YOU MODEL
     document.querySelector('.submit').addEventListener('click', ()=> {
-        window.location.href = '#'
-        document.querySelector(".shadow").style.display = 'block'
-        document.querySelector(".appreciation").style.cssText = `display:block;display: flex;justify-content: center;
-        align-items: center;`
+        const userEmail = document.querySelector("#email").value
+        if(userEmail.length > 0 && userEmail.includes("@")){
+            window.location.href = '#'
+            document.querySelector(".shadow").style.display = 'block'
+            document.querySelector(".appreciation").style.cssText = `display:block;display: flex;justify-content: center;align-items: center;`
+        }
+        else{
+            document.querySelector("#email").style.cssText = `border: 1px solid red`
+
+            setTimeout(()=>{
+                document.querySelector("#email").style.cssText = `border: none`
+            }, 2000)
+        }
     })
 
 
